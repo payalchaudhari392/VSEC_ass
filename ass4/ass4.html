@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guess Game</title>
+</head>
+<body>
+
+<center>
+
+<h2>Guess the Number (1 to 10)</h2>
+
+<input type="number" id="num">
+
+<button onclick="check()">Check</button>
+
+<h3 id="result"></h3>
+
+</center>
+
+<script>
+
+let secret = 7;
+
+function check()
+{
+    let guess = Number(document.getElementById("num").value);
+
+    if(guess == secret)
+    {
+        document.getElementById("result").innerHTML = " Correct! You Win.";
+    }
+    else if(guess < secret)
+    {
+        document.getElementById("result").innerHTML = "Too Low! Try Again.";
+    }
+    else
+    {
+        document.getElementById("result").innerHTML = "Too High! Try Again.";
+    }
+}
+
+</script>
+
+</body>
+</html>

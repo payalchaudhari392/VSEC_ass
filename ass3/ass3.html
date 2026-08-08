@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result</title>
+</head>
+
+<body>
+
+<center>
+
+<h2>Student Result</h2>
+
+Name:
+<input type="text" id="name">
+
+<br><br>
+
+Marathi:
+<input type="text" id="m1">
+
+<br><br>
+
+English:
+<input type="text" id="m2">
+
+<br><br>
+
+Chemistry:
+<input type="text" id="m3">
+
+<br><br>
+
+<button onclick="addStudent()">Add Student</button>
+
+<br><br>
+
+<table border="1">
+
+<tr>
+    <th>Name</th>
+    <th>Marathi</th>
+    <th>English</th>
+    <th>Chemistry</th>
+    <th>Total</th>
+    <th>Percentage</th>
+</tr>
+
+<tbody id="result"></tbody>
+
+</table>
+
+<h3 id="topper"></h3>
+
+<script>
+
+let topperName = "";
+let topperPercentage = 0;
+
+function addStudent()
+{
+    let name = document.getElementById("name").value;
+
+    let marathi = Number(document.getElementById("m1").value);
+    let english = Number(document.getElementById("m2").value);
+    let chemistry = Number(document.getElementById("m3").value);
+
+    let total = marathi + english + chemistry;
+
+    let percentage = (total / 300) * 100;
+
+    document.getElementById("result").innerHTML +=
+        "<tr>" +
+        "<td>" + name + "</td>" +
+        "<td>" + marathi + "</td>" +
+        "<td>" + english + "</td>" +
+        "<td>" + chemistry + "</td>" +
+        "<td>" + total + "</td>" +
+        "<td>" + percentage + "%</td>" +
+        "</tr>";
+
+    if(percentage > topperPercentage)
+    {
+        topperPercentage = percentage;
+        topperName = name;
+    }
+
+    document.getElementById("topper").innerHTML =
+        "Topper: " + topperName +
+        " - " + topperPercentage + "%";
+}
+
+</script>
+
+</center>
+
+</body>
+</html>
+
