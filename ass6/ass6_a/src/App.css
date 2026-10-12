@@ -1,0 +1,50 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eaf0fa;
+}
+
+.app {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+}
+
+h1 {
+  color: #234a91;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 7px;
+  background: #315fba;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d428a;
+}
+
+.buttons {
+  margin: 15px 0;
+}
+
+p {
+  overflow-wrap: anywhere;
+}
